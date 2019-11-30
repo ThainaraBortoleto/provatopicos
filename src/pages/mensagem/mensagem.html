@@ -1,0 +1,36 @@
+<!--
+  Generated template for the MensagemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>mensagem</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+    <ion-content padding>
+        <ion-card *ngFor="let msg of mensagem | async" >
+          
+          <ion-card-content>
+            <ion-card-title>
+                {{msg.nome}}
+            </ion-card-title>
+            <p>
+              {{msg.content}}
+            </p>
+          </ion-card-content>
+
+        </ion-card>
+
+
+        <ion-fab >
+          <button ion-fab color="secondary" (click)="onAddClick()">
+            <ion-icon name="add">Enviar</ion-icon> 
+          </button>
+        </ion-fab>
+      </ion-content>
+
+
